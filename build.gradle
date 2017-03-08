@@ -1,0 +1,97 @@
+group 'me.kidult'
+version '1.0'
+
+apply plugin: "java"
+apply plugin: "idea"
+apply plugin: "war"
+apply plugin: "maven"
+
+compileJava.options.encoding = "UTF-8"
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenLocal()
+    maven { url "https://repo.spring.io/release" }
+    mavenCentral()
+    jcenter()
+}
+
+ext {
+    springBootVersion = "1.3.5.RELEASE"
+    springSessionVersion = "1.2.2.RELEASE"
+    awsSDKVersion = "1.11.77"
+    tomcatVersion = "8.0.33"
+}
+
+dependencies {
+
+    // Json Web Token
+    compile "io.jsonwebtoken:jjwt:0.7.0"
+
+    // XIAOMI Push
+//    compile files("libs/MiPush_SDK_Server_2_2_15.jar")
+
+    // In App Purchase
+//    compile "com.google.api-client:google-api-client:1.22.0"
+//    compile "com.google.apis:google-api-services-androidpublisher:v2-rev32-1.22.0"
+
+    // Commons Pool2
+    compile "org.apache.commons:commons-pool2:2.4.2"
+
+    // Commons Codec
+    compile "commons-codec:commons-codec:1.10"
+
+    // AWS
+    compile "com.amazonaws:aws-java-sdk-core:$awsSDKVersion"
+    compile "com.amazonaws:aws-java-sdk-dynamodb:$awsSDKVersion"
+    compile "com.amazonaws:aws-java-sdk-s3:$awsSDKVersion"
+    compile "com.amazonaws:aws-java-sdk-ses:$awsSDKVersion"
+    compile "com.amazonaws:aws-java-sdk-sns:$awsSDKVersion"
+    compile "com.amazonaws:aws-java-sdk-sqs:$awsSDKVersion"
+    compile "com.amazonaws:aws-java-sdk-kinesis:$awsSDKVersion"
+
+    // Spring Framework
+    compile "org.springframework.boot:spring-boot-starter-web:$springBootVersion"
+    compile "org.springframework.boot:spring-boot-configuration-processor:$springBootVersion"
+
+    // AOP
+    compile "org.springframework.boot:spring-boot-starter-aop:$springBootVersion"
+
+    // JDBC
+//    compile "org.springframework.boot:spring-boot-starter-jdbc:$springBootVersion"
+
+    // c3p0
+//    compile "com.mchange:c3p0:0.9.5.2"
+
+    // MySQL
+    compile "mysql:mysql-connector-java:5.1.38"
+
+    // Session
+    compile "org.springframework.session:spring-session:$springSessionVersion"
+
+    // Tomcat
+    compile "org.springframework.boot:spring-boot-starter-tomcat:$springBootVersion"
+    compile "org.apache.tomcat.embed:tomcat-embed-jasper:$tomcatVersion"
+    compile "javax.servlet:jstl:1.2"
+
+    // Apache
+    compile "org.apache.directory.studio:org.apache.commons.io:2.4"
+
+    // Log
+    compile "eu.bitwalker:UserAgentUtils:1.18"
+    compile "ch.qos.logback:logback-core:1.1.3"
+    compile "ch.qos.logback:logback-classic:1.1.3"
+
+    // junit
+    compile "org.springframework.boot:spring-boot-starter-test:$springBootVersion"
+    compile "junit:junit-dep:4.11"
+    compile "junit:junit:4.12"
+
+    // Notification Systems
+    compile "com.google.gcm:gcm-server:1.0.0"
+
+    // Lombok
+    compile "org.projectlombok:lombok:1.16.8"
+
+}
