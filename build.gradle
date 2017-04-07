@@ -51,6 +51,9 @@ dependencies {
     compile "com.amazonaws:aws-java-sdk-sqs:$awsSDKVersion"
     compile "com.amazonaws:aws-java-sdk-kinesis:$awsSDKVersion"
 
+    // ElasticSearch Geoip
+    compile "com.maxmind.geoip2:geoip2:2.7.0"
+
     // Spring Framework
     compile "org.springframework.boot:spring-boot-starter-web:$springBootVersion"
     compile "org.springframework.boot:spring-boot-configuration-processor:$springBootVersion"
@@ -59,10 +62,10 @@ dependencies {
     compile "org.springframework.boot:spring-boot-starter-aop:$springBootVersion"
 
     // JDBC
-//    compile "org.springframework.boot:spring-boot-starter-jdbc:$springBootVersion"
+    compile "org.springframework.boot:spring-boot-starter-jdbc:$springBootVersion"
 
     // c3p0
-//    compile "com.mchange:c3p0:0.9.5.2"
+    compile "com.mchange:c3p0:0.9.5.2"
 
     // MySQL
     compile "mysql:mysql-connector-java:5.1.38"
