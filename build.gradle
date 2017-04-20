@@ -26,6 +26,10 @@ ext {
 
 dependencies {
 
+    // swagger
+    compile "io.springfox:springfox-swagger2:2.6.1"
+    compile "io.springfox:springfox-swagger-ui:2.6.1"
+
     // Json Web Token
     compile "io.jsonwebtoken:jjwt:0.7.0"
 

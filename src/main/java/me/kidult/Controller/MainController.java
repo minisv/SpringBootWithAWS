@@ -19,4 +19,9 @@ public class MainController {
     return "index";
   }
 
+  @RequestMapping(value = "/swagger")
+  public String swagger() {
+    return "swagger-ui/index";
+  }
+
 }
